@@ -1,0 +1,21 @@
+<div class="borrowed-books">
+  <div class="title">
+      Borrowed books:
+  </div>
+  <div class="book-list">
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Autor</th>
+        <th></th>
+      </tr>
+      <ng-container *ngFor="let book of books">
+        <tr>
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td><button (click)="returnBook(book)">Return</button></td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>
