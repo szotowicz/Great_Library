@@ -3,29 +3,13 @@
     background-color: rgb(160, 169, 170);
 }
 
-.main-content {
-    background-color: gray;
+#sidebar{
+  padding-top: 50px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: rgb(23, 34, 48);
 }
 
-.main-content:after {
-    content:'';
-    display:block;
-    clear:both;
-}
-
-.search-and-borrow {
-    width: 60%;
-    float: left;
-    background-color: rgb(150, 150, 150);
-}
-
-.borrowed-books {
-    width: 40%;
-    float: left;
-    background-color: rgb(119, 118, 118);
-}
-
-.footer {
-    background-color: blue;
-    padding: 2% 10% 2% 10%;
+#main-content{
+  background-color: rgb(52, 71, 90);
 }

@@ -1,0 +1,36 @@
+<div class="tab-container">
+  <div class="find-user">
+    <div class="title">
+      All user:
+    </div>
+    <div class="search-user">
+      <input placeholder="search a user" (input)="searchUser($event.target.value)">
+    </div>
+    <div class="user-list">
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Email</th>
+          <th></th>
+        </tr>
+        <ng-container *ngFor="let user of usersToDisplay">
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td *ngIf="user.isActive; then enableUserBtn; else disableUserBtn"></td>
+            <ng-template #enableUserBtn>
+              <button (click)="enableUser(user)">Enable</button>
+            </ng-template>
+            <ng-template #disableUserBtn>
+              <button (click)="disableUser(user)">Disable</button>
+            </ng-template>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+  </div>
+</div>

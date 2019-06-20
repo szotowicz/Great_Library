@@ -1,0 +1,30 @@
+<div class="tab-container">
+  <div class="search-and-borrow">
+    <div class="title">
+      All books:
+    </div>
+    <div class="search-book">
+      <input placeholder="search a book" (input)="searchBook($event.target.value)">
+    </div>
+    <div class="book-list">
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Autor</th>
+          <th>Quantity</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <ng-container *ngFor="let book of booksToDisplay">
+          <tr>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.quantity}}</td>
+            <td><button (click)="editBook(book)">Edit</button></td>
+            <td><button (click)="borrowBook(book)">Borrow</button></td>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+  </div>
+</div>
